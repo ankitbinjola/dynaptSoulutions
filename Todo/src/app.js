@@ -7,12 +7,13 @@ const app = express();
 const connString='mongodb+srv://mongodb:mongodb@dynapt.kjews.mongodb.net/test';
 const mongoose = require('mongoose');
 const postroutes = require('../src/routes/posts')
+const  authroute = require('./routes/auth');
 //middleware
 
 app.use(bodyParser.json());
 
 app.use('/posts', postroutes);
-
+app.use('/users', authroute);
 
 app.get('/', (request, response) => {
     console.log(`URL: ${request.url}`);
