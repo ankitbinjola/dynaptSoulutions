@@ -44,8 +44,9 @@ addToList(){
   }
 
 
-  removeItem(){
-  console.log("index of array ===");
+  removeItem(i:any){
+  console.log("index of array ===", i);
+  this.datasource.splice(i, 1);
   }
 
 

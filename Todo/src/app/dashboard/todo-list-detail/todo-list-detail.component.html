@@ -16,7 +16,7 @@
 </div>
 <div>
   <div *ngFor="let item of datasource ;let i = index;">
-    <mat-card class="card">Title {{item.title}} Description {{item.description}}  {{i}}  <span (click)="removeItem()">x</span></mat-card>
+    <mat-card class="card"> <span style="margin-right : 30px">Title- {{item.title}}</span>  <span>Description- {{item.description}}</span>  <button type="button" style="background-color: aqua;" (click)="removeItem(i)">x</button></mat-card>
   </div>
 
 </div>
