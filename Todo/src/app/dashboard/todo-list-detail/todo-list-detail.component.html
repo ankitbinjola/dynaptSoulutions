@@ -1,0 +1,26 @@
+<div>
+<div>
+  <div style="display: flex; flex-direction: row;">
+    <div>
+      <label>Title</label>
+      <input type="text" placeholder="title" [formControl] = "title">
+    </div>
+    <div>
+      <label>Discription</label>
+      <input type="text" placeholder="discription" [formControl] = "discription">
+    </div>
+  <div>
+    <button type="button" (click)="addToList()">ADD TO LIST</button>
+  </div>
+  </div>
+</div>
+<div>
+  <div *ngFor="let item of datasource ;let i = index;">
+    <mat-card class="card">Title {{item.title}} Description {{item.description}}  {{i}}  <span (click)="removeItem()">x</span></mat-card>
+  </div>
+
+</div>
+</div>
+
+
+

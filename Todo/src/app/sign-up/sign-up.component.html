@@ -1,1 +1,20 @@
-<p>sign-up works!</p>
+<div><p>sign-up </p></div>
+<div><button type="button" [routerLink]="['/login']">Login Page</button></div>
+<div>
+  <label>
+    Name:
+    <input type="text" [formControl]="name">
+  </label>
+  <label>email</label>
+  <input type="text" placeholder="email" [formControl]="email">
+  <label>password</label>
+  <input type="password" placeholder="password" [formControl] = "password">
+  <button type="button" (click)="postDetails()">submit</button>
+  </div>
+
+
+
+
+
+
+

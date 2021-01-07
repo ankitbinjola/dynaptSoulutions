@@ -2,6 +2,7 @@ const MongoClient = require('mongodb').MongoClient;
 const { request } = require('express');
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require("cors");
 const port = 3000 ;
 const app = express();
 const connString='mongodb+srv://mongodb:mongodb@dynapt.kjews.mongodb.net/test';
@@ -9,6 +10,14 @@ const mongoose = require('mongoose');
 const postroutes = require('../src/routes/posts')
 const  authroute = require('./routes/auth');
 //middleware
+
+
+var corsOptions = {
+  origin: "http://localhost:3000"
+};
+
+app.use(cors())
+
 
 app.use(bodyParser.json());
 
