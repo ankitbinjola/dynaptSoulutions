@@ -29,10 +29,14 @@ export class LoginComponent implements OnInit {
     // console.log(data.password)
     this.loginservice.loginUser(data).subscribe(res => {
       console.log("response of logi==" , res);
+      this.router.navigateByUrl('/dashboard');
+      this.toastr.success("hurray Login ")
+    }, err => {
+      this.toastr.error("failed to Login")
     })
   console.log("login values==" + (data));
-  this.toastr.success("hurray Login ")
-  this.router.navigateByUrl('/dashboard')
+
+
 
   }
 

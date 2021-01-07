@@ -1,6 +1,6 @@
 <div>
 <div>
-  <div style="display: flex; flex-direction: row;">
+  <div style="display: flex; flex-direction: row; justify-content: center; ">
     <div>
       <label>Title</label>
       <input type="text" placeholder="title" [formControl] = "title">
@@ -10,13 +10,18 @@
       <input type="text" placeholder="discription" [formControl] = "discription">
     </div>
   <div>
-    <button type="button" (click)="addToList()">ADD TO LIST</button>
+    <button style="margin-top: 24px;" type="button" (click)="addToList()">ADD TO LIST</button>
   </div>
   </div>
 </div>
 <div>
   <div *ngFor="let item of datasource ;let i = index;">
-    <mat-card class="card"> <span style="margin-right : 30px">Title- {{item.title}}</span>  <span>Description- {{item.description}}</span>  <button type="button" style="background-color: aqua;" (click)="removeItem(i)">x</button></mat-card>
+    <mat-card class="card"> <span style="margin-right : 30px">Title- {{item.title}}</span>  <span>Description- {{item.description}}</span>  <button type="button" style="background-color: aqua;
+      position: absolute;
+      left: 500px;
+      width: 100px;
+      bottom: 0px;
+  " (click)="removeItem(i)">x</button></mat-card>
   </div>
 
 </div>

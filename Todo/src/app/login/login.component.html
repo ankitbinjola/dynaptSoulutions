@@ -1,10 +1,19 @@
-<p>login </p>
 
-<label>Email</label>
-<input type="text" placeholder="email" [formControl] = "email">
+  <div class="container">
+    <h1>Log In</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
 
-<label>Password</label>
-<input type="password" placeholder="password" [formControl] = "password">
+    <label for="email"><b>Email</b></label>
+    <input type="text" [formControl] = "email" placeholder="Enter Email" name="email" required>
 
-<button type="button" (click) = "login()">SignIn</button>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" [formControl] = "password" placeholder="Enter Password" name="psw" required>
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn" [routerLink]="['/signup']">Cancel</button>
+      <button type="submit" class="signupbtn" (click) = "login()">Sign In</button>
+    </div>
+  </div>
+
 

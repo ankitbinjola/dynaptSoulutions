@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, platformBrowser } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
@@ -14,6 +14,13 @@ import { TodoListComponent } from './dashboard/todo-list/todo-list.component';
 import { TodoListDetailComponent } from './dashboard/todo-list-detail/todo-list-detail.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
+import {MatInputModule} from '@angular/material/input';
+import { MatSliderModule } from '@angular/material/slider';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+
+
+
 const routes: Routes = [{ path: 'dashboard', component: DashboardComponent },
 { path: 'signup', component: SignUpComponent },
 { path: 'login', component: LoginComponent },
@@ -30,6 +37,8 @@ const routes: Routes = [{ path: 'dashboard', component: DashboardComponent },
   ],
   imports: [
 
+    MatSliderModule,
+    MatInputModule,
     MatTableModule,
     BrowserModule,
     MatCardModule,
@@ -37,7 +46,8 @@ const routes: Routes = [{ path: 'dashboard', component: DashboardComponent },
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
     CommonModule,
-    BrowserAnimationsModule, // required animations module
+    BrowserAnimationsModule,
+     // required animations module
     ToastrModule.forRoot(), // ToastrModule added
   ],
   providers: [],
